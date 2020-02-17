@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Single App ejemplo</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Odibee+Sans|Tomorrow&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		section {
+			width: 1000px;
+			height: 1710px;
+			text-align: center;
+		}
+
+		/*css SPLASH*/
+		.splash {
+			background: LightSeaGreen;
+		}
+
+		#carga {
+			border: 15px solid #17202A;
+			border-top-color: #F44336;
+			border-top-style: groove;
+			height: 200px;
+			width: 200px;
+			border-radius: 100%;
+			margin: auto;
+			margin-top: 55%;
+			animation: girar 1.5s linear infinite;
+		}
+
+		@keyframes girar {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		/*SECCIONES*/
+		.home {
+			background: OrangeRed;
+		}
+
+		.juego {
+			background: Violet;
+		}
+
+		.instrucciones {
+			background: YellowGreen;
+		}
+
+		.creditos {
+			background: #F44336;
+		}
+
+		.resultado {
+			background: #138D75;
+		}
+
+		.oculto {
+			display: none;
+		}
+
+		/*fuentes*/
+		.fontOdibee {
+			font-family: 'Odibee Sans', cursive;
+		}
+
+		.justificar {
+			text-align: justify;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.nombres{
+			color: white;
+			font-family: 'Tomorrow', sans-serif;
+		}
+		/*tamaño letras*/
+		.titulo {
+			font-size: 700%;
+		}
+
+		.medio {
+			font-size: 400%;
+		}
+
+		.small {
+			font-size: 300%;
+		}
+
+		.small2 {
+			font-size: 200%;
+		}
+
+		/*tamaño imagenes*/
+		.imgFace {
+			width: 20%;
+			height: 20%;
+			padding: 5%;
+		}
+
+		.imgMenu {
+			width: 60%;
+			height: 30%;
+		}
+
+		.imgMenu2{
+			background: #212F3D;
+			border-radius: 10px;
+			width: 40%;
+			height: 20%;
+			margin-left: 30px;
+			color:white;
+		}
+
+		.imgResult {
+			width: 50%;
+			height: 30%;
+		}
+
+		/*botones*/
+		.btnMenu {
+			width: 300px;
+			height: 100px;
+			border-radius: 10px;
+			border: 0;
+			text-align: center;
+			transition-duration: 0.4s;
+			margin-bottom: 20px;
+		}
+
+		.btnMenu:hover {
+			background-color: #17202A;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			color: white;
+		}
+
+		.boton {
+			background-color: #2196F3;
+			color: white;
+			padding: 20px 40px;
+			text-decoration: none;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		.boton:hover {
+			background-color: #17202A;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		}
+
+		.volver {
+			float: left;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		.btnOpciones {
+			width: 300px;
+			height: 100px;
+			border-radius: 10px;
+			border: 0;
+			text-align: center;
+			margin-top: 10%;
+			transition-duration: 0.4s;
+			background: white;
+		}
+
+		.btnOpciones:hover {
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+		}
+
+		/*posición*/
+		.centrar {
+			margin: auto;
+		}
+
+		.izq {
+			float: left
+		}
+
+		.der {
+			float: right
+		}
+
+		.enLinea {
+			display: inline;
+		}
+		#btnJugar{
+			margin-left: -400px;
+		}
+		#btnCred{
+			margin-left: 400px;
+		}
+	</style>
+	<script>
+		var secciones = [];
+		var tiempo_splash = 2000;
+
+		window.onload = function () {
+			inicializarReferencias();
+			setTimeout(cambiarSplash, tiempo_splash);
+		}
+
+		function inicializarReferencias() {
+			secciones[1] = document.getElementById("seccion_1");
+			secciones[2] = document.getElementById("seccion_2");
+			secciones[3] = document.getElementById("seccion_3");
+			secciones[4] = document.getElementById("seccion_4");
+			secciones[5] = document.getElementById("seccion_5");
+			secciones[6] = document.getElementById("seccion_6");
+		}
+
+		function cambiarSplash() {
+			secciones[1].className = "splash oculto";
+			secciones[2].className = "home";
+		}
+		function cambiarSeccion(id_seccion) {
+			for (var i in secciones) {
+				secciones[i].classList.add("oculto");
+			}
+			secciones[id_seccion].classList.remove("oculto");
+		}
+		function volverQuestion(id_seccion) {
+			var opcion = window.confirm("¿Está seguro que desea salir?\nSu progreso se guardará hasta aquí")
+			if (opcion) {
+				for (var i in secciones) {
+					secciones[i].classList.add("oculto");
+				}
+				secciones[id_seccion].classList.remove("oculto");
+			}
+
+		}
+		var elemento; //boton de opcion buena
+		function buena() {
+			elemento = document.getElementById('good');
+			elemento.style.background = '#2ECC71';
+			var tiempo = 1000;
+			setTimeout(cambiarResult, tiempo);//hacer funcion cuando se acabe el 'tiempo'
+
+		}
+		function cambiarResult() {
+			for (var i in secciones) {
+				secciones[i].classList.add("oculto");
+			}
+			secciones[6].classList.remove("oculto");
+			elemento.style.background = 'white';//volver a poner el boton del color blanco
+		}
+	</script>
+</head>
+
+<body class="fontOdibee">
+	<!-- Splash -->
+	<section id="seccion_1" class="splash animated fadeIn">
+		<br>
+		<h1 class="titulo">Splash del juego</h1>
+		<div id="carga"></div>
+	</section>
+
+	<!-- Home -->
+	<section id="seccion_2" class="home oculto">
+		<br>
+		<h1 class="titulo">GUESS ME: movie edition</h1>
+		<br><br>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="" class="imgMenu">
+		<br>
+		<br><br><br>
+		<button onclick="cambiarSeccion(3)" class="fontOdibee medio btnMenu" id="btnJugar">Jugar</button><br>
+		<button onclick="cambiarSeccion(5)" class="fontOdibee medio btnMenu" >Instrucciones</button><br>
+		<button onclick="cambiarSeccion(4)" class="fontOdibee medio btnMenu" id="btnCred">Creditos</button><br>
+		<div class="fontOdibee small imgMenu2">IMG</div>
+	</section>
+
+	<!-- Juego -->
+	<section id="seccion_3" class="juego oculto">
+		<a href="javascript:void()" onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
+		<br>
+		<br><br><br><br><br>
+		<h1 class="medio centrar">[genero de la pelicula]</h1>
+		<br>
+		<br>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgMenu">
+		<br>
+		<br>
+		<button class="btnOpciones medio fontOdibee" id="a">Opcion 1</button><br>
+		<button class="btnOpciones medio fontOdibee" id="b">Opcion 2</button><br>
+		<button class="btnOpciones medio fontOdibee" id="c">Opcion 3</button><br>
+	</section>
+
+	<!-- Créditos / Autores -->
+	<section id="seccion_4" class="creditos oculto">
+		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<br>
+		<br>
+		<h1 class="titulo">Conoce a las personas detras</h1>
+		<div>
+			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png"
+				alt="" class="izq imgFace">&nbsp;&nbsp;
+			<span class="small nombres">Barrios Carleo Valeria Helena/ Diseñadora</span>
+			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
+				content of a
+				page when
+				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+		</div>
+		<div>
+			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png"
+				alt="" class="der imgFace">&nbsp;&nbsp;
+			<span class="small nombres">Uribe Betancur Luis Fernando / Ingeniero</span>
+			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
+				content of a
+				page when
+				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+		</div>
+		<div>
+			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Thor-icon.png" alt=""
+				class="izq imgFace">&nbsp;&nbsp;
+			<span class="small nombres">Juan David Sánchez Hoyos / Ingeniero</span>
+			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
+				content of a
+				page when
+				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+		</div>
+
+	</section>
+
+	<!-- Instrucciones -->
+	<section id="seccion_5" class="instrucciones oculto">
+		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<br>
+		<br>
+		<h1 class="titulo">¿Cómo jugar?</h1>
+		<p class="small justificar">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit
+			consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab
+			minima omnis sed! <br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias repellendus aliquam odit, iusto earum
+			ipsum. Repudiandae deleniti corporis, praesentium accusantium aspernatur temporibus quisquam minus, soluta
+			provident molestiae. Tempore, aliquid, fugit. <br>
+			It is a long established fact that a reader will be distracted by the readable content of a page when
+			looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+			of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+			desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+			search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+			evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+	</section>
+
+	<!-- Resultados -->
+	<section id="seccion_6" class="resultado oculto">
+		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<br>
+		<br>
+		<h1 class="titulo suma">#</h1>
+		<h1 class="medio">Tus aciertos fueron:</h1>
+		<br>
+		<br>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="" class="imgResult der">
+		<br>
+		<!-- id result_1 es para hacer el calculo y cambiar el valor #-->
+		<p class="small fontOdibee" id="result_1">Genero 1: #</p>
+		<p class="small fontOdibee" id="result_2">Genero 2: #</p>
+		<p class="small fontOdibee" id="result_3">Genero 3: #</p>
+		<p class="small fontOdibee" id="result_4">Genero 4: #</p>
+		<p class="small fontOdibee" id="result_5">Genero 5: #</p>
+		<p class="titulo fontOdibee">¡FELICIDADES!</p>
+		<P class="medio fontOdibee">Que la fuerza este contigo</P>
+	</section>
+</body>
+
+</html>
