@@ -27,10 +27,12 @@
 		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="" class="imgMenu">
 		<br>
 		<br><br><br>
-		<button onclick="cambiarSeccion(3)" class="fontOdibee medio btnMenu" id="btnJugar">Jugar</button><br>
-		<button onclick="cambiarSeccion(5)" class="fontOdibee medio btnMenu" >Instrucciones</button><br>
-		<button onclick="cambiarSeccion(4)" class="fontOdibee medio btnMenu" id="btnCred">Creditos</button><br>
-		<div class="fontOdibee small imgMenu2">IMG</div>
+		<div class="contenedor_Menu">
+			<div class="item_juego" ><button onclick="cambiarSeccion(3)" class="fontOdibee medio btnMenu " id="btnJugar">Jugar</button></div>
+			<div class="item_inst" > <button onclick="cambiarSeccion(5)" class="fontOdibee medio btnMenu " >Instrucciones</button></div>
+			<div class="item_cred" > <button onclick="cambiarSeccion(4)" class="fontOdibee medio btnMenu " id="btnCred">Creditos</button></div>
+		</div>
+		<div class="fontOdibee small imgMenu2 ">IMG</div>
 	</section>
 
 	<!-- Juego -->
@@ -42,11 +44,11 @@
 		<br>
 		<br>
 		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgMenu">
-		<br>
-		<br>
-		<button class="btnOpciones medio fontOdibee" onclick=clic(this) id="a">[Opcion1]</button><br>
-		<button class="btnOpciones medio fontOdibee" onclick=clic(this) id="b">[Opcion2]</button><br>
-		<button class="btnOpciones medio fontOdibee" onclick=clic(this) id="c">[Opcion3]</button><br>
+		<div class="contenedor_opciones">
+			<div class="item_opcion1"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="a">[Opcion1]</button></div>
+			<div class="item_opcion2"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="b">[Opcion2]</button></div>
+			<div class="item_opcion3"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="c">[Opcion3]</button></div>
+		</div>
 	</section>
 
 	<!-- Créditos / Autores -->
