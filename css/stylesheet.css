@@ -157,7 +157,7 @@ section {
 }
 
 .btnOpciones {
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
   border: 0;
   text-align: center;
@@ -202,14 +202,13 @@ section {
   row-gap: 20px ;
 }
 .contenedor_opciones{
-  background: slateblue;
+  margin-top: 185px;
   display: grid;
   grid-template-areas: 
   '. op1 .'
   '. op2 .'
-  '. op3 .'
-  '. . .';
-  row-gap: 50px ;
+  '. op3 .';
+  row-gap: 100px ;
 }
 /*items*/
 
@@ -222,15 +221,12 @@ section {
 .item_inst{
   grid-area: inst;
 }
-.item.opcion1{
+.item_opcion1{
   grid-area: op1;
-  background: red;
 }
-.item.opcion2{
+.item_opcion2{
   grid-area: op2;
-  background: salmon;
 }
-.item.opcion3{
+.item_opcion3{
   grid-area: op3;
-  background: seagreen;
 }
