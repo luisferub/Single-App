@@ -21,12 +21,10 @@
 
 	<!-- Home -->
 	<section id="seccion_2" class="home oculto">
-		<br>
-		<h1 class="titulo">GUESS ME: movie edition</h1>
-		<br><br>
-		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="" class="imgMenu">
-		<br>
-		<br><br><br>
+		<div class="contenedor_home">
+			<div class="item_titulo"><h1 class="titulo">GUESS ME: movie edition</h1></div>
+			<div class="item_imgM1"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="" class="imgMenu"></div>
+		</div>
 		<div class="contenedor_Menu">
 			<div class="item_juego" ><button onclick="cambiarSeccion(3)" class="fontOdibee medio btnMenu " id="btnJugar">Jugar</button></div>
 			<div class="item_inst" > <button onclick="cambiarSeccion(5)" class="fontOdibee medio btnMenu " >Instrucciones</button></div>
@@ -38,12 +36,10 @@
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
 		<a href="javascript:void()" onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
-		<br>
-		<br><br><br><br><br>
-		<h1 class="medio centrar" id="genero">[Genero]</h1>
-		<br>
-		<br>
-		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgMenu">
+		<div class="contenedor_retrato">
+			<div class="item_genero"><h1 class="medio centrar" id="genero">[Genero]</h1></div>
+			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgRetrato"></div>
+		</div>
 		<div class="contenedor_opciones">
 			<div class="item_opcion1"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="a">[Opcion1]</button></div>
 			<div class="item_opcion2"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="b">[Opcion2]</button></div>
