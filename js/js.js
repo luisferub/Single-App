@@ -1,7 +1,19 @@
 var secciones = [];
 		var tiempo_splash = 2000;
+
+		// Puntajes
+
 		var puntaje = 0;
-		var contador = 0;
+		var puntaje_accion = 0;
+		var puntaje_ficcion = 0;
+		var puntaje_comedia = 0;
+		var puntaje_terror = 0;
+		var puntaje_drama = 0;
+		
+		var contador = 0; // Contador de preguntas
+		var max = 10; // Maxima cantidad de preguntas
+
+		var aux = 0;
 
 		window.onload = function () {
 			inicializarReferencias();
@@ -33,7 +45,22 @@ var secciones = [];
                 document.getElementById("genero").innerHTML = personajes[lista[0]][1];
                 letra=personajes[lista[0]][2];
                 document.getElementById(letra).innerHTML = personajes[lista[0]][0];
+			switch (letra) {
+				case "a":
+					document.getElementById("b").innerHTML = personajes[lista[0]][3];
+					document.getElementById("c").innerHTML = personajes[lista[0]][4];
+					break;
+				case "b":
+					document.getElementById("a").innerHTML = personajes[lista[0]][3];
+					document.getElementById("c").innerHTML = personajes[lista[0]][4];
+					break;
+				case "c":
+					document.getElementById("a").innerHTML = personajes[lista[0]][3];
+					document.getElementById("b").innerHTML = personajes[lista[0]][4];
+					break;
+				}
             }
+
 		}
 		function volverQuestion(id_seccion) {
 			var opcion = window.confirm("¿Está seguro que desea salir?")
@@ -43,40 +70,73 @@ var secciones = [];
 				}
 				secciones[id_seccion].classList.remove("oculto");
 			}
+		
+			puntaje = 0;
+			puntaje_accion = 0;
+	 		puntaje_ficcion = 0;
+			puntaje_comedia = 0;
+			puntaje_terror = 0;
+			puntaje_drama = 0
+			contador = 0;
 
 		}
 		var elemento;
-		function clic(boton) {		
-            elemento = document.getElementById(boton.id);
-            respuesta = document.getElementById(letra);
-			contador++;
-			if((elemento.innerText)==(respuesta.innerText)){
-				buena();
-            }
-            else {
-                mala();
-            }
+		function clic(boton) {
+			if (aux==0){
+				elemento = document.getElementById(boton.id);
+         	    respuesta = document.getElementById(letra);
+				contador++;
+				aux = 1;
+				if((elemento.innerText)==(respuesta.innerText)){
+					buena();
+        		}
+           	 	else {
+           	     mala();
+            	}
+			}
+			else {}		     
 		}
 		function buena() {
 			elemento.style.background = '#2ECC71';
 			var tiempo = 1000;
 			puntaje++;
-			if (contador<25) {
-			setTimeout(continuarSiguiente, tiempo);
+			aux = 1;
+			genero = document.getElementById("genero");
+							
+			switch (genero.innerText) {
+				case "Accion":
+					puntaje_accion++;
+					break;
+				case "Ciencia ficcion":
+					puntaje_ficcion++;
+					break;
+				case "Comedia":
+					puntaje_comedia++;
+					break;
+				case "Terror":
+					puntaje_terror++;
+					break;
+				case "Drama":
+					puntaje_drama++;
+					break;
 			}
+			if (contador<max) {
+			setTimeout(continuarSiguiente, tiempo);
+				}
 			else{
 			setTimeout(cambiarResult, tiempo);//hacer funcion cuando se acabe el 'tiempo'
-			}
+				}
 		}
 		function mala() {
 			elemento.style.background = '#FA5858';
 			var tiempo = 1000;
-			if (contador<25) {
+			aux = 1;
+			if (contador<max) {
 			setTimeout(continuarSiguiente, tiempo);
 			}
 			else{
 			setTimeout(cambiarResult, tiempo);//hacer funcion cuando se acabe el 'tiempo'
-			}
+			}		
 		}
 		function cambiarResult() {
 			for (var i in secciones) {
@@ -84,16 +144,37 @@ var secciones = [];
 			}
 			secciones[6].classList.remove("oculto");
 			elemento.style.background = 'white';//volver a poner el boton del color blanco
+			document.getElementById("puntaje").innerHTML = ('Total: ' + puntaje);
+			document.getElementById("result_1").innerHTML = ('Accion: ' + puntaje_accion);
+			document.getElementById("result_2").innerHTML = ('Ciencia Ficcion: ' + puntaje_ficcion);
+			document.getElementById("result_3").innerHTML = ('Comedia: ' + puntaje_comedia);
+			document.getElementById("result_4").innerHTML = ('Terror: ' + puntaje_terror);
+			document.getElementById("result_5").innerHTML = ('Drama: ' + puntaje_drama);
         }
         var i = 1;
 		function continuarSiguiente() {
-            elemento.style.background = 'white';//volver a poner el boton del color blanco
-            if(contador<25){
-                document.getElementById("genero").innerHTML = personajes[lista[i]][1];
-                letra=personajes[lista[i]][2];
-                document.getElementById(letra).innerHTML = personajes[lista[i]][0];
-                i++;
-            }
+				elemento.style.background = 'white';//volver a poner el boton del color blanco
+				aux = 0;
+            	if(contador<max){
+                	document.getElementById("genero").innerHTML = personajes[lista[i]][1];
+                	letra=personajes[lista[i]][2];
+                	document.getElementById(letra).innerHTML = personajes[lista[i]][0];
+			switch (letra) {
+				case "a":
+					document.getElementById("b").innerHTML = personajes[lista[i]][3];
+					document.getElementById("c").innerHTML = personajes[lista[i]][4];
+					break;
+				case "b":
+					document.getElementById("a").innerHTML = personajes[lista[i]][3];
+					document.getElementById("c").innerHTML = personajes[lista[i]][4];
+					break;
+				case "c":
+					document.getElementById("a").innerHTML = personajes[lista[i]][3];
+					document.getElementById("b").innerHTML = personajes[lista[i]][4];
+					break;
+				}
+			i++;
+            		}
 		}
 
 var lista = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
@@ -103,126 +184,176 @@ let personajes = [
     [
         "John Wick",
         "Accion",
-	    "a"
+		"a",
+		"Indiana jones",
+		"Bruce Banner"
     ],
     [
         "Neo",
         "Accion",
-	    "c"
+		"c",
+		"Han Solo",
+		"Frank Martin"
     ],
     [
         "John McClane",
         "Accion",
-	    "b"
+		"b",
+		"Jhon Rambo",
+		"Jack Sparrow"
     ],
     [
         "Sarah Connor",
         "Accion",
-	    "c"
+		"c",
+		"Alice Abernathy",
+		"Leia Organa"
     ],
     [
         "La novia",
         "Accion",
-	    "b"
+		"b",
+		"Lara Croft",
+		"Agente Smith"
     ],
     [
         "Obi-Wan Kenobi",
         "Ciencia ficcion",
-	    "a"
+		"a",
+		"Yoda",
+		"Darth Maul"
     ],
     [
         "Jake Sully",
         "Ciencia ficcion",
-	    "c"
+		"c",
+		"Superman",
+		"Luke Skywalker"
     ],
     [
         "Joseph Cooper",
         "Ciencia ficcion",
-	    "b"
+		"b",
+		"Depredador",
+		"Bib Fortuna"
     ],
     [
         "Elliot",
         "Ciencia ficcion",
-	    "b"
+		"b",
+		"Star-Lord",
+		"Ellie Sattler"
     ],
     [
         "Marty McFly",
         "Ciencia ficcion",
-	    "a"
+		"a",
+		"Rick Deckard",
+		"Fox Mulder"
     ],
     [
         "Cindy Campbell",
         "Comedia",
-	    "c"
+		"c",
+		"Dana Scully",
+		"Dale Arden"
     ],    
     [
         "Steve Stifler",
         "Comedia",
-	    "a"
+		"a",
+		"Less Grossman",
+		"Kenny McCormick"
     ],
     [
         "Stanley Ipkiss",
         "Comedia",
-	    "c"
+		"c",
+		"Ace Ventura",
+		"Conde Olaf"
     ],    
     [
         "Alan Garner",
         "Comedia",
-	    "b"
+		"b",
+		"Fred Jones",
+		"Klaus Baudelaire"
     ],
     [
         "Peter Venkman",
         "Comedia",
-	    "a"
+		"a",
+		"Arthur Poe",
+		"Waylon Smithers"
     ],
     [
         "Ed Warren",
         "Terror",
-	    "b"
+		"b",
+		"Freddy Krueger",
+		"Regan MacNeil"
     ],
     [
         "Chris MacNeil",
         "Terror",
-	    "a"
+		"a",
+		"Jack Torrance",
+		"Michael Mayers"
     ],
     [
         "Thomasin",
         "Terror",
-	    "c"
+		"c",
+		"Jason Voorhees",
+		"Leatherface"
     ],
     [
         "Jigsaw",
         "Terror",
-	    "b"
+		"b",
+		"The Candyman",
+		"Damien Thorn"
     ],
     [
         "Pennywise",
         "Terror",
-	    "a"
+		"a",
+		"Frankestein",
+		"Mary Shaw"
     ],
     [
         "Tony Montana",
         "Drama",
-	    "a"
+		"a",
+		"Norman Bates",
+		"Alex DeLarge"
     ],
     [
         "Jack Dawson",
         "Drama",
-	    "a"
+		"a",
+		"Rick Blaine",
+		"Samara Morgan"
     ],
     [
         "Wlagyslaw Szpilman",
         "Drama",
-	    "b"
+		"b",
+		"Severus Snape",
+		"Travis Bickle"
     ],
     [
         "Forrest Gump",
         "Drama",
-	    "c"
+		"c",
+		"Atticus Finch",
+		"John Marston"
     ],
     [
         "Michael Corleone",
         "Drama",
-	    "b"
+		"b",
+		"Hannibal Lecter",
+		"Darth Vader"
     ]
 ];
