@@ -21,18 +21,22 @@ section{
 }
 
 /*fuentes*/
-.fontOdibee {
-  font-family: 'Odibee Sans', cursive;
+@font-face{
+  font-family: introHeadR;
+  src: url(../fuentes/IntroHeadR-Base.otf);
 }
-
-.justificar {
-  text-align: justify;
-  margin-left: 20px;
-  margin-right: 20px;
+.fuente1{
+  font-family: introHeadR;
 }
-.nombres{
+@font-face{
+  font-family: introScriptR;
+  src: url(../fuentes/IntroScriptR-H2Base.otf);
+}
+.fuente2{
+  font-family: introScriptR;
+}
+.item_genero h1{ /*Color de la letra Genero*/ 
   color: white;
-  font-family: 'Tomorrow', sans-serif;
 }
 /*tamaño letras*/
 .titulo {
@@ -63,17 +67,12 @@ section{
   margin-top: 20%;
 
 }
-
 .imgMenu2{
   position: relative;
-  bottom: 5%;
-  left: 3%;
-  background: #212F3D;
-  border-radius: 10px;
-  width: 40%;
-  height: 28%;
-  color:white;
-  
+  left: -215px;
+  top: -286px;
+  width: 600px;
+  z-index: 0; /*ponerlo detras de los botones*/
 }
 .imgRetrato{
   width: 100%;
@@ -83,15 +82,56 @@ section{
   width: 50%;
   height: 30%;
 }
+.imgCreditos{
+  width: 80%;
+  position: relative;
+  top: 10%;
+}
+.imgSelfie{ /*tamaño imgenes de retratos autores*/
+  width: 300px;
+}
+.imgValeria{
+  position: relative;
+  left: 1%;
+  top: -20cm;
+}
+.imgLuis{
+  position: relative;
+  right: -26%;
+  top: -11cm;
+}
+.imgDavid{
+  position: relative;
+  left: -60%;
+  top: -2cm;
+}
+.imgInstrucciones{
+  width: 70%;
+  position: relative;
+  top: 10%;
+}
+.imgInstrucciones2{
+  width: 80%;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  z-index: 0;
+}
+
 
 /*botones*/
+button{
+  color: #480329;
+  outline: none;
+}
 .btnMenu {
-  width: 300px;
+  width: 360px;
   height: 100px;
-  border-radius: 10px;
+  border-radius: 35px;
   border: 0;
   text-align: center;
   transition-duration: 0.4s;
+  background: #C93E46;
 }
 
 .btnMenu:hover {
@@ -122,16 +162,27 @@ section{
 
 .btnOpciones {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  border-radius: 20px;
   border: 0;
   text-align: center;
   transition-duration: 0.4s;
-  background: white;
+  background: #00BFBD;
+  color: white;
 }
 
 .btnOpciones:hover {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+  
 }
+#seccion_5 button{ /* boton jugar de instrucciones*/
+  position: relative;
+  top: 13%;
+  left: -17%;
+  z-index: 1;
+}
+
+
+
 
 /*posición*/
 .centrar {
@@ -149,25 +200,22 @@ section{
 .enLinea {
   display: inline;
 }
-/*
-#btnJugar{
-  margin-left: -400px;
-}
-#btnCred{
-  margin-left: 400px;
-}*/
 /* Contenedores*/
 .contenedor_Menu{
+  margin-top: 15%;
   display: grid;
   grid-template-areas: 
   '. juego juego . . .'
   '. . inst inst . .'
   '. . . creditos creditos .';
-  row-gap: 20px ;
+  row-gap: 65px ;
+  position: relative;
+  z-index: 1;/* ponerlo delante de la imagen*/
 }
 .contenedor_opciones{
-  margin-top: 185px;
+  margin-top: 100px;
   display: grid;
+  grid-template-rows: 100px 100px 100px;
   grid-template-areas: 
   '. op1 .'
   '. op2 .'

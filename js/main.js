@@ -1,5 +1,5 @@
 var secciones = [];
-		var tiempo_splash = 2000;
+		var tiempo_splash = 2500;
 
 		var puntaje = 0; // Puntaje
 		var contador = 0; // Contador de preguntas
@@ -85,7 +85,8 @@ var secciones = [];
 			else {}		     
 		}
 		function buena() {
-			elemento.style.background = '#2ECC71';
+			elemento.style.background = '#FFF956 ';
+			elemento.style.color='#000000'
 			var tiempo = 1000;
 			puntaje++;
 			aux = 1;
@@ -98,7 +99,7 @@ var secciones = [];
 				}
 		}
 		function mala() {
-			elemento.style.background = '#FA5858';
+			elemento.style.background = '#707070';
 			var tiempo = 1000;
 			aux = 1;
 			if (contador<max) {
@@ -140,7 +141,8 @@ var secciones = [];
         }
         var i = 1;
 		function continuarSiguiente() {
-				elemento.style.background = 'white';//volver a poner el boton del color blanco
+				elemento.style.background = '#00BFBD';//volver a poner el boton del color blanco
+				elemento.style.color = "white";
 				aux = 0;
             	if(contador<max){
                 	document.getElementById("genero").innerHTML = personajes[lista[i]][1];
@@ -198,7 +200,7 @@ let personajes = [
 		"a",
 		"El bosque maldito",
 		"Mamá",
-		'img/theshining.png'
+		'img/the-shining.png'
     ],
     [
         "Scary Movie",
@@ -206,7 +208,7 @@ let personajes = [
 		"c",
 		"¿Qué pasó ayer?",
 		"¿Y dónde está el piloto?",
-		'img/scarymovie.png'
+		'img/scary-movie.png'
     ],
     [
         "The Matrix",
@@ -230,7 +232,7 @@ let personajes = [
 		"b",
 		"Star Trek",
 		"Blade Runner",
-		'img/starwars.png'
+		'img/star-wars.png'
     ],
     [
         "Scarface",
@@ -262,7 +264,7 @@ let personajes = [
 		"b",
 		"Alita",
 		"Ghost in shell",
-		'img/johnwick.png'
+		'img/john-wick.png'
     ],
     [
         "Viernes 13",
@@ -270,7 +272,7 @@ let personajes = [
 		"a",
 		"Halloween",
 		"San Valentín sangriento",
-		'img/viernes13.png'
+		'img/viernes-13.png'
     ],
     [
         "Saw",
@@ -294,7 +296,7 @@ let personajes = [
 		"c",
 		"Zoolander",
 		"Luna de miel en familia",
-		'img/lamascara.png'
+		'img/la-mascara.png'
     ],    
     [
         "Forrest Gump",
@@ -302,7 +304,7 @@ let personajes = [
 		"b",
 		"Roma",
 		"Yo antes de tí",
-		'img/forrestgump.png'
+		'img/forrest-gump.png'
     ],
     [
         "El pianista",
@@ -310,7 +312,7 @@ let personajes = [
 		"a",
 		"Whiplash",
 		"The Help",
-		'img/elpianista.png'
+		'img/el-pianista.png'
     ],
     [
         "El exorcista",
@@ -318,7 +320,7 @@ let personajes = [
 		"b",
 		"La monja",
 		"El rito",
-		'img/elexorcista.png'
+		'img/el-exorcista.png'
     ],
     [
         "Los Cazafantasmas",
@@ -326,7 +328,7 @@ let personajes = [
 		"a",
 		"Evolution",
 		"The blues brothers",
-		'img/cazafantasmas.png'
+		'img/caza-fantasmas.png'
     ],
     [
         "Duro de matar",
@@ -334,7 +336,7 @@ let personajes = [
 		"c",
 		"Misión imposible",
 		"Salt",
-		'img/durodematar.png'
+		'img/duro-de-matar.png'
     ],
     [
         "Kill Bill",
@@ -342,7 +344,7 @@ let personajes = [
 		"b",
 		"Death Proof",
 		"Grind House",
-		'img/killbill.png'
+		'img/kill-bill.png'
     ],
     [
         "Terminator",
@@ -358,7 +360,7 @@ let personajes = [
 		"a",
 		"Brasco",
 		"El Irlandés",
-		'img/elpadrino.png'
+		'img/el-padrino.png'
     ],
     [
         "El Conjuro",
@@ -366,7 +368,7 @@ let personajes = [
 		"a",
 		"La noche del demonio",
 		"La crucifixión",
-		'img/elconjuro.png'
+		'img/el-conjuro.png'
     ],
     [
         "Interstellar",
@@ -382,7 +384,7 @@ let personajes = [
 		"c",
 		"Little Men",
 		"Norbit",
-		'img/donde-es-tan-las-rubias.png'
+		'img/donde-estan-las-rubias.png'
     ],
     [
         "Volver al Futuro",
@@ -390,6 +392,6 @@ let personajes = [
 		"b",
 		"Inception",
 		"Gravity",
-		'img/volveralfuturo.png'
+		'img/volver-al-futuro.png'
     ]
 ];

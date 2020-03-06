@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Odibee+Sans|Tomorrow&display=swap" rel="stylesheet">
 
 </head>
 
@@ -22,92 +21,42 @@
 			<div><img src="img/Logo.png" alt="" class="imgMenu"></div>
 		</div>
 		<div class="contenedor_Menu">
-			<div class="item_juego" ><button onclick="cambiarSeccion(3)" class="fontOdibee medio btnMenu " id="btnJugar">Jugar</button></div>
-			<div class="item_inst" > <button onclick="cambiarSeccion(5)" class="fontOdibee medio btnMenu " >Instrucciones</button></div>
-			<div class="item_cred" > <button onclick="cambiarSeccion(4)" class="fontOdibee medio btnMenu " id="btnCred">Creditos</button></div>
+			<div class="item_juego" ><button onclick="cambiarSeccion(3)" class="fuente1 medio btnMenu " >JUGAR</button></div>
+			<div class="item_inst" > <button onclick="cambiarSeccion(5)" class="fuente1 medio btnMenu " >INSTRUCCIONES</button></div>
+			<div class="item_cred" > <button onclick="cambiarSeccion(4)" class="fuente1 medio btnMenu " >CREDITOS</button></div>
 		</div>
-		<div class="fontOdibee small imgMenu2 ">IMG</div>
+		<img src="img/ilustracionhome.png" class="imgMenu2"> 
 	</section>
 
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
 		<a onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
 		<div class="contenedor_retrato">
-			<div class="item_genero"><h1 class="medio centrar" id="genero">[Genero]</h1></div>
+			<div class="item_genero"><h1 class="medio centrar fuente2" id="genero">[Genero]</h1></div>
 			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgRetrato"></div>
 		</div>
 		<div class="contenedor_opciones">
-			<div class="item_opcion1"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="a">[Opcion1]</button></div>
-			<div class="item_opcion2"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="b">[Opcion2]</button></div>
-			<div class="item_opcion3"><button class="btnOpciones medio fontOdibee" onclick=clic(this) id="c">[Opcion3]</button></div>
+			<div class="item_opcion1"><button class="btnOpciones medio fuente1" onclick=clic(this) id="a">[Opcion1]</button></div>
+			<div class="item_opcion2"><button class="btnOpciones medio fuente1" onclick=clic(this) id="b">[Opcion2]</button></div>
+			<div class="item_opcion3"><button class="btnOpciones medio fuente1" onclick=clic(this) id="c">[Opcion3]</button></div>
 		</div>
 	</section>
 
 	<!-- Créditos / Autores -->
 	<section id="seccion_4" class="creditos oculto">
 		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
-		<br>
-		<br>
-		<h1 class="titulo">Conoce a las personas detras</h1>
-		<div>
-			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png"
-				alt="" class="izq imgFace">&nbsp;&nbsp;
-			<span class="small nombres">Barrios Carleo Valeria Helena/ Diseñadora</span>
-			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
-				content of a
-				page when
-				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-		</div>
-		<div>
-			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png"
-				alt="" class="der imgFace">&nbsp;&nbsp;
-			<span class="small nombres">Uribe Betancur Luis Fernando / Ingeniero</span>
-			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
-				content of a
-				page when
-				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-		</div>
-		<div>
-			<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Thor-icon.png" alt=""
-				class="izq imgFace">&nbsp;&nbsp;
-			<span class="small nombres">Juan David Sánchez Hoyos / Ingeniero</span>
-			<p class="small2 justificar">It is a long established fact that a reader will be distracted by the readable
-				content of a
-				page when
-				looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-				of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-				desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-				search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-		</div>
-
+		<img src="img/creditos.png" class="imgCreditos">
+		<img src="img/valeria.png" class="imgValeria imgSelfie">
+		<img src="img/luis f.png" class="imgLuis imgSelfie">
+		<img src="img/juan david.png" class="imgDavid imgSelfie">
 	</section>
 
 	<!-- Instrucciones -->
 	<section id="seccion_5" class="instrucciones oculto">
 		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
-		<br>
-		<br>
-		<h1 class="titulo">¿Cómo jugar?</h1>
-		<p class="small justificar">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit
-			consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab
-			minima omnis sed! <br>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias repellendus aliquam odit, iusto earum
-			ipsum. Repudiandae deleniti corporis, praesentium accusantium aspernatur temporibus quisquam minus, soluta
-			provident molestiae. Tempore, aliquid, fugit. <br>
-			It is a long established fact that a reader will be distracted by the readable content of a page when
-			looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-			of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-			desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-			search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-			evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-		</p>
+		<img src="img/instrucciones.png" class="imgInstrucciones">
+		<button onclick="cambiarSeccion(3)" class="fuente1 medio btnMenu ">JUGAR</button>
+		<img src="img/ilustracioninstrucciones.png" class="imgInstrucciones2">
 	</section>
 
 	<!-- Resultados -->
