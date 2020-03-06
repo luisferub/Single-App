@@ -3,7 +3,7 @@ var secciones = [];
 
 		var puntaje = 0; // Puntaje
 		var contador = 0; // Contador de preguntas
-		var max = 10; // Maxima cantidad de preguntas
+		var max = 1; // Maxima cantidad de preguntas
 
 		var aux = 0;
 

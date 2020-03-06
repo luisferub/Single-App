@@ -38,6 +38,14 @@ section{
 .item_genero h1{ /*Color de la letra Genero*/ 
   color: white;
 }
+#seccion_6{
+  color: white;
+}
+#seccion_6 h1{
+  margin: 0;
+  position: relative;
+  top: 10%;
+}
 /*tamaño letras*/
 .titulo {
   font-size: 700%;
@@ -54,7 +62,13 @@ section{
 .small2 {
   font-size: 200%;
 }
-
+#puntaje{ /* tamaño de puntaje*/
+  font-size: 8cm;
+  margin: 0;
+  margin-top: 27%;
+  position: relative;
+  z-index: 10;
+}
 /*tamaño imagenes*/
 .imgFace {
   width: 20%;
@@ -172,7 +186,7 @@ button{
 }
 
 .btnOpciones:hover {
-  
+  transform: scale(1.1);
 }
 #seccion_5 button{ /* boton jugar de instrucciones*/
   position: relative;
@@ -259,4 +273,27 @@ button{
 }
 .item_retrato{
   grid-area: ret;
+}
+
+/*Circulos sección de resultado*/
+.circulo{
+  border-radius: 100%;
+}
+.red{
+  width: 500px;
+  height: 500px;
+  background: #C93E46;
+  position: relative;
+  top: -55%;
+  left: 17%;
+  z-index: 0;
+}
+.blue{
+  width: 350px;
+  height: 350px;
+  background: #00BFBD;
+  position: relative;
+  top: -76%;
+  left: 41%;
+  z-index: 1;
 }
