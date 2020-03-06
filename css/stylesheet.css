@@ -10,30 +10,10 @@ section {
 
 /*css SPLASH*/
 .splash {
-  background: LightSeaGreen;
+  background-image: url(../img/Splash\ 2.gif);
+  background-size: cover;
 }
 
-#carga {
-  border: 15px solid #17202A;
-  border-top-color: #F44336;
-  border-top-style: groove;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  margin: auto;
-  margin-top: 55%;
-  animation: girar 1.5s linear infinite;
-}
-
-@keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 /*SECCIONES*/
 .home {
