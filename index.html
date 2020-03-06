@@ -35,7 +35,7 @@
 
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
-		<a href="javascript:void()" onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
+		<a onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
 		<div class="contenedor_retrato">
 			<div class="item_genero"><h1 class="medio centrar" id="genero">[Genero]</h1></div>
 			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgRetrato"></div>
@@ -49,7 +49,7 @@
 
 	<!-- Créditos / Autores -->
 	<section id="seccion_4" class="creditos oculto">
-		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
 		<br>
 		<br>
 		<h1 class="titulo">Conoce a las personas detras</h1>
@@ -94,7 +94,7 @@
 
 	<!-- Instrucciones -->
 	<section id="seccion_5" class="instrucciones oculto">
-		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
 		<br>
 		<br>
 		<h1 class="titulo">¿Cómo jugar?</h1>
@@ -116,7 +116,7 @@
 
 	<!-- Resultados -->
 	<section id="seccion_6" class="resultado oculto">
-		<a href="javascript:void()" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<a href="javascript:location.reload();" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
 		<br>
 		<br>
 		<h1 class="titulo suma">Resultados</h1>
@@ -126,14 +126,9 @@
 		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="" class="imgResult der">
 		<br>
 		<!-- id result_1 es para hacer el calculo y cambiar el valor #-->
-		<p class="small fontOdibee" id="result_1">Genero 1: #</p>
-		<p class="small fontOdibee" id="result_2">Genero 2: #</p>
-		<p class="small fontOdibee" id="result_3">Genero 3: #</p>
-		<p class="small fontOdibee" id="result_4">Genero 4: #</p>
-		<p class="small fontOdibee" id="result_5">Genero 5: #</p>
 		<p class="small fontOdibee" id="puntaje">Total: #</p>
-		<p class="titulo fontOdibee">¡FELICIDADES!</p>
-		<P class="medio fontOdibee">Que la fuerza este contigo</P>
+		<p class="titulo fontOdibee" id="men">[Mensaje]</p>
+		<P class="medio fontOdibee" id="desc">[Descripcion]</P>
 	</section>
 </body>
 
