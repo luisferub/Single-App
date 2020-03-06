@@ -1,13 +1,6 @@
 body {
   margin: 0;
 }
-
-section {
-  width: 1000px;
-  height: 1710px;
-  text-align: center;
-}
-
 /*css SPLASH*/
 .splash {
   background-image: url(../img/Splash\ 2.gif);
@@ -16,24 +9,11 @@ section {
 
 
 /*SECCIONES*/
-.home {
-  background: OrangeRed;
-}
-
-.juego {
-  background: Violet;
-}
-
-.instrucciones {
-  background: YellowGreen;
-}
-
-.creditos {
-  background: #F44336;
-}
-
-.resultado {
-  background: #138D75;
+section{
+  background-color: #17133B;
+  width: 1000px;
+  height: 1710px;
+  text-align: center;
 }
 
 .oculto {
@@ -79,8 +59,9 @@ section {
 }
 
 .imgMenu {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  margin-top: 20%;
+
 }
 
 .imgMenu2{
@@ -202,16 +183,6 @@ section {
   '. ret ret ret .';
   row-gap: 50px ;
 }
-.contenedor_home{
-  display: grid;
-  grid-template-columns: auto 25% 25% 25% auto;
-  grid-template-areas:
-  '. . . . . '
-  'titulo titulo titulo titulo titulo '
-  '. imgM1 imgM1 imgM1 . '
-  '. imgM1 imgM1 imgM1 . '
-  '. imgM1 imgM1 imgM1 . ';
-}
 .contenedor_home h1{
   margin: 54px auto auto;
 }
@@ -240,10 +211,4 @@ section {
 }
 .item_retrato{
   grid-area: ret;
-}
-.item_titulo{
-  grid-area:titulo;
-}
-.item_imgM1{
-  grid-area: imgM1;
 }

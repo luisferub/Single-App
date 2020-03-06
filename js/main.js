@@ -198,7 +198,7 @@ let personajes = [
 		"a",
 		"El bosque maldito",
 		"Mamá",
-		'img/the-shining.png'
+		'img/theshining.png'
     ],
     [
         "Scary Movie",
@@ -206,7 +206,7 @@ let personajes = [
 		"c",
 		"¿Qué pasó ayer?",
 		"¿Y dónde está el piloto?",
-		'img/scary-movie.png'
+		'img/scarymovie.png'
     ],
     [
         "The Matrix",
@@ -230,7 +230,7 @@ let personajes = [
 		"b",
 		"Star Trek",
 		"Blade Runner",
-		'img/star-wars.png'
+		'img/starwars.png'
     ],
     [
         "Scarface",
@@ -262,7 +262,7 @@ let personajes = [
 		"b",
 		"Alita",
 		"Ghost in shell",
-		'img/john-wick.png'
+		'img/johnwick.png'
     ],
     [
         "Viernes 13",
@@ -270,7 +270,7 @@ let personajes = [
 		"a",
 		"Halloween",
 		"San Valentín sangriento",
-		'img/viernes-13.png'
+		'img/viernes13.png'
     ],
     [
         "Saw",
@@ -294,7 +294,7 @@ let personajes = [
 		"c",
 		"Zoolander",
 		"Luna de miel en familia",
-		'img/la-mascara.png'
+		'img/lamascara.png'
     ],    
     [
         "Forrest Gump",
@@ -302,7 +302,7 @@ let personajes = [
 		"b",
 		"Roma",
 		"Yo antes de tí",
-		'img/forrest-gump.png'
+		'img/forrestgump.png'
     ],
     [
         "El pianista",
@@ -310,7 +310,7 @@ let personajes = [
 		"a",
 		"Whiplash",
 		"The Help",
-		'img/el-pianista.png'
+		'img/elpianista.png'
     ],
     [
         "El exorcista",
@@ -318,7 +318,7 @@ let personajes = [
 		"b",
 		"La monja",
 		"El rito",
-		'img/el-exorcista.png'
+		'img/elexorcista.png'
     ],
     [
         "Los Cazafantasmas",
@@ -334,7 +334,7 @@ let personajes = [
 		"c",
 		"Misión imposible",
 		"Salt",
-		'img/duro-de-matar.png'
+		'img/durodematar.png'
     ],
     [
         "Kill Bill",
@@ -342,7 +342,7 @@ let personajes = [
 		"b",
 		"Death Proof",
 		"Grind House",
-		'img/kill-bill.png'
+		'img/killbill.png'
     ],
     [
         "Terminator",
@@ -358,7 +358,7 @@ let personajes = [
 		"a",
 		"Brasco",
 		"El Irlandés",
-		'img/el-padrino.png'
+		'img/elpadrino.png'
     ],
     [
         "El Conjuro",
@@ -366,7 +366,7 @@ let personajes = [
 		"a",
 		"La noche del demonio",
 		"La crucifixión",
-		'img/el-conjuro.png'
+		'img/elconjuro.png'
     ],
     [
         "Interstellar",
@@ -382,7 +382,7 @@ let personajes = [
 		"c",
 		"Little Men",
 		"Norbit",
-		'img/donde-estan-las-rubias.png'
+		'img/donde-es-tan-las-rubias.png'
     ],
     [
         "Volver al Futuro",
@@ -390,6 +390,6 @@ let personajes = [
 		"b",
 		"Inception",
 		"Gravity",
-		'img/volver-al-futuro.png'
+		'img/volveralfuturo.png'
     ]
 ];
