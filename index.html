@@ -30,7 +30,7 @@
 
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
-		<a onclick="volverQuestion(2)" class="boton volver small">&lt;</a>
+		<img src="img/bt_inicio.png" onclick="volverQuestion(2)" class="volver">
 		<div class="contenedor_retrato">
 			<div class="item_genero"><h1 class="medio centrar fuente2" id="genero">[Genero]</h1></div>
 			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgRetrato"></div>
@@ -44,7 +44,7 @@
 
 	<!-- Créditos / Autores -->
 	<section id="seccion_4" class="creditos oculto">
-		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<img src="img/bt_inicio.png" onclick="cambiarSeccion(2)" class="volver">
 		<img src="img/creditos.png" class="imgCreditos">
 		<img src="img/valeria.png" class="imgValeria imgSelfie">
 		<img src="img/luis f.png" class="imgLuis imgSelfie">
@@ -53,7 +53,7 @@
 
 	<!-- Instrucciones -->
 	<section id="seccion_5" class="instrucciones oculto">
-		<a onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<img src="img/bt_inicio.png" onclick="cambiarSeccion(2)" class="volver">
 		<img src="img/instrucciones.png" class="imgInstrucciones">
 		<button onclick="cambiarSeccion(3)" class="fuente1 medio btnMenu ">JUGAR</button>
 		<img src="img/ilustracioninstrucciones.png" class="imgInstrucciones2">
@@ -61,10 +61,10 @@
 
 	<!-- Resultados -->
 	<section id="seccion_6" class="resultado oculto">
-		<a href="javascript:location.reload();" onclick="cambiarSeccion(2)" class="boton volver small">&lt;</a>
+		<img src="img/bt_inicio.png" onclick="location.reload()" class="volver">
 		<h1 class="titulo fuente1">Tus resultados fueron:</h1>
 		<!-- id result_1 es para hacer el calculo y cambiar el valor #-->
-		<p class="fuente2" id="puntaje">Total: #</p>
+		<div class="fuente2 resultadoTotal"><p id="puntaje">Total: #</p>/25</div>
 		<p class="titulo fuente2" id="men">[Mensaje]</p>
 		<P class="medio fuente1" id="desc">[Descripcion]</P>
 		<div class="circulo red"></div>

@@ -3,7 +3,7 @@ var secciones = [];
 
 		var puntaje = 0; // Puntaje
 		var contador = 0; // Contador de preguntas
-		var max = 1; // Maxima cantidad de preguntas
+		var max = 2; // Maxima cantidad de preguntas
 
 		var aux = 0;
 
@@ -115,7 +115,7 @@ var secciones = [];
 			}
 			secciones[6].classList.remove("oculto");
 			elemento.style.background = 'white';//volver a poner el boton del color blanco
-			document.getElementById("puntaje").innerHTML = (puntaje + '/25');
+			document.getElementById("puntaje").innerHTML = (puntaje);
 
 			if(puntaje<=5){
 				document.getElementById("men").innerHTML = mensaje[4][0];
@@ -188,7 +188,7 @@ let mensaje = [
 		"Aún te faltan muchas películas por ver."
 	],
 	[
-		"Ups...",
+		"F...",
 		"Quizás el cine no es lo tuyo..."
 	]
 ];
