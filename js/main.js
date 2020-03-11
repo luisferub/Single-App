@@ -3,7 +3,7 @@ var tiempo_splash = 2500;
 
 var puntaje = 0; // Puntaje
 var contador = 0; // Contador de preguntas
-var max = 2; // Maxima cantidad de preguntas
+var max = 1; // Maxima cantidad de preguntas
 
 var aux = 0;
 
@@ -58,13 +58,12 @@ function cambiarSeccion(id_seccion) {
 function volverQuestion(id_seccion) {
 	// alertsweet2 - alert confirm
 	Swal.fire({
-		title: '¿Estas seguro?',
-		text: "tu puntaje actual sera borrado",
-		icon: 'warning',
+		imageUrl: 'img/pregunta.png',
 		showCancelButton: true,
 		confirmButtonColor: '#00BFBD',
 		cancelButtonColor: '#d33',
-		confirmButtonText: 'Si, salir'
+		confirmButtonText: 'Si, salir',
+		background: 'none' 
 	}).then((result) => {
 		if (result.value) {
 			for (var i in secciones) {
@@ -213,12 +212,12 @@ let mensaje = [
 		"¡Estás a mitad de camino de ser un experto en cine!"
 	],
 	[
-		"Ups...",
+		"Lo sentimos",
 		"Aún te faltan muchas películas por ver."
 	],
 	[
-		"F...",
-		"Quizás el cine no es lo tuyo..."
+		"lo sentimos",
+		"Según tu puntuación serás el primer personaje en morir en la tipica pelicula de terror adolescente de Hollywood"
 	]
 ];
 

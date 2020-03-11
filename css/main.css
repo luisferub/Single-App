@@ -11,8 +11,8 @@ body {
 /*SECCIONES*/
 section{
   background-color: #17133B;
-  width: 1000px;
-  height: 1712px;
+  width: 360px;
+  height: 640px;
   text-align: center;
 }
 
@@ -27,6 +27,7 @@ section{
 }
 .fuente1{
   font-family: introHeadR;
+  font-weight: normal;
 }
 @font-face{
   font-family: introScriptR;
@@ -34,9 +35,11 @@ section{
 }
 .fuente2{
   font-family: introScriptR;
+  font-weight: normal;
 }
 .item_genero h1{ /*Color de la letra Genero*/ 
   color: white;
+  font-size: 200%;
 }
 #seccion_6{
   color: white;
@@ -44,28 +47,32 @@ section{
 #seccion_6 h1{
   margin: 0;
   position: relative;
-  top: 10%;
+  top: 13%;
 }
 /*tamaño letras*/
 .titulo {
-  font-size: 700%;
+  font-size: 200%;
 }
 
 .medio {
-  font-size: 400%;
+  font-size: 113%;
 }
 #puntaje{ /* tamaño de puntaje*/
-  font-size: 8cm;
+  font-size: 225%;
   position: relative;
   z-index: 10;
   display: inline;
 }
 .resultadoTotal{
   margin: 0;
-  margin-top: 27%;
+  margin-top: 40%;
   position: relative;
   z-index: 10;
-  font-size: 4cm;
+  font-size: 213%;
+}
+.mensaje{
+  font-size: 300%;
+  margin-bottom: 0;
 }
 /*tamaño imagenes*/
 
@@ -76,14 +83,13 @@ section{
 }
 .imgMenu2{
   position: relative;
-  left: -215px;
-  top: -285px;
-  width: 600px;
+  left: -64px;
+  top: -87px;
+  width: 68%;
   z-index: 0; /*ponerlo detras de los botones*/
 }
 .imgRetrato{
-  width: 100%;
-  height: 100%;
+  width: 77%;
 }
 .imgCreditos{
   width: 80%;
@@ -91,22 +97,22 @@ section{
   top: 10%;
 }
 .imgSelfie{ /*tamaño imgenes de retratos autores*/
-  width: 300px;
+  width: 30%;
 }
 .imgValeria{
   position: relative;
   left: 1%;
-  top: -20cm;
+  top: -41%;
 }
 .imgLuis{
   position: relative;
   right: -26%;
-  top: -11cm;
+  top: -22%;
 }
 .imgDavid{
   position: relative;
   left: -60%;
-  top: -2cm;
+  top: -3%;
 }
 .imgInstrucciones{
   width: 70%;
@@ -114,10 +120,10 @@ section{
   top: 10%;
 }
 .imgInstrucciones2{
-  width: 80%;
+  width: 84%;
   position: relative;
-  top: 10%;
-  left: 10%;
+  top: 12%;
+  left: 8%;
   z-index: 0;
 }
 
@@ -128,9 +134,9 @@ button{
   outline: none;
 }
 .btnMenu {
-  width: 360px;
-  height: 100px;
-  border-radius: 35px;
+  width: 76%;
+  height: 33px;
+  border-radius: 10px;
   border: 0;
   text-align: center;
   transition-duration: 0.4s;
@@ -147,6 +153,7 @@ button{
   position: absolute;
   left: 20px;
   top: 20px;
+  width: 40px;
   transition-duration: 0.6s;
 }
 .volver:hover{
@@ -155,8 +162,8 @@ button{
 
 .btnOpciones {
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 60%;
+  border-radius: 7px;
   border: 0;
   text-align: center;
   transition-duration: 0.4s;
@@ -172,6 +179,7 @@ button{
   top: 13%;
   left: -17%;
   z-index: 1;
+  width: 36%;
 }
 
 
@@ -181,6 +189,11 @@ button{
 .centrar {
   margin: auto;
 }
+#desc{
+  width: 67%;
+  margin: 2% auto;
+
+}
 /* Contenedores*/
 .contenedor_Menu{
   margin-top: 15%;
@@ -189,19 +202,19 @@ button{
   '. juego juego . . .'
   '. . inst inst . .'
   '. . . creditos creditos .';
-  row-gap: 65px ;
+  row-gap: 16px ;
   position: relative;
   z-index: 1;/* ponerlo delante de la imagen*/
 }
 .contenedor_opciones{
   margin-top: 100px;
   display: grid;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-rows: 50px 50px 50px;
   grid-template-areas: 
   '. op1 .'
   '. op2 .'
   '. op3 .';
-  row-gap: 100px ;
+  row-gap: 10px ;
 }
 .contenedor_retrato{
   display: grid;
@@ -210,10 +223,7 @@ button{
   '. . gen . .'
   '. ret ret ret .'
   '. ret ret ret .';
-  row-gap: 50px ;
-}
-.contenedor_home h1{
-  margin: 54px auto auto;
+  row-gap: 10% ;
 }
 /*items*/
 
@@ -247,20 +257,20 @@ button{
   border-radius: 100%;
 }
 .red{
-  width: 500px;
-  height: 500px;
+  width: 130px;
+  height: 130px;
   background: #C93E46;
   position: relative;
-  top: -56%;
-  left: 19%;
+  top: -47%;
+  left: 29%;
   z-index: 0;
 }
 .blue{
-  width: 350px;
-  height: 350px;
+  width: 80px;
+  height: 80px;
   background: #00BFBD;
   position: relative;
-  top: -76%;
+  top: -60%;
   left: 49%;
   z-index: 1;
 }

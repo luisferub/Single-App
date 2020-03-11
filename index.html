@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Single App ejemplo</title>
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -18,28 +20,39 @@
 
 	<!-- Home -->
 	<section id="seccion_2" class="home oculto">
-		<div class="contenedor_home">
-			<div><img src="img/Logo.png" alt="" class="imgMenu"></div>
+
+		<div>
+			<img src="img/Logo.png" alt="" class="imgMenu">
 		</div>
+
 		<div class="contenedor_Menu">
-			<div class="item_juego" ><button onclick="cambiarSeccion(3)" class="fuente1 medio btnMenu " >JUGAR</button></div>
-			<div class="item_inst" > <button onclick="cambiarSeccion(5)" class="fuente1 medio btnMenu " >INSTRUCCIONES</button></div>
-			<div class="item_cred" > <button onclick="cambiarSeccion(4)" class="fuente1 medio btnMenu " >CREDITOS</button></div>
+			<div class="item_juego"><button onclick="cambiarSeccion(3)" class="fuente1 medio btnMenu ">JUGAR</button>
+			</div>
+			<div class="item_inst"> <button onclick="cambiarSeccion(5)"
+					class="fuente1 medio btnMenu ">INSTRUCCIONES</button></div>
+			<div class="item_cred"> <button onclick="cambiarSeccion(4)" class="fuente1 medio btnMenu ">CREDITOS</button>
+			</div>
 		</div>
-		<img src="img/ilustracionhome.png" class="imgMenu2"> 
+		<img src="img/ilustracionhome.png" class="imgMenu2">
 	</section>
 
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
 		<img src="img/bt_inicio.png" onclick="volverQuestion(2)" class="volver">
 		<div class="contenedor_retrato">
-			<div class="item_genero"><h1 class="medio centrar fuente2" id="genero">[Genero]</h1></div>
-			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" id="personaje" class="imgRetrato"></div>
+			<div class="item_genero">
+				<h1 class="centrar fuente2" id="genero">[Genero]</h1>
+			</div>
+			<div class="item_retrato"><img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png"
+					id="personaje" class="imgRetrato"></div>
 		</div>
 		<div class="contenedor_opciones">
-			<div class="item_opcion1"><button class="btnOpciones medio fuente1" onclick=clic(this) id="a">[Opcion1]</button></div>
-			<div class="item_opcion2"><button class="btnOpciones medio fuente1" onclick=clic(this) id="b">[Opcion2]</button></div>
-			<div class="item_opcion3"><button class="btnOpciones medio fuente1" onclick=clic(this) id="c">[Opcion3]</button></div>
+			<div class="item_opcion1"><button class="btnOpciones medio fuente1" onclick=clic(this)
+					id="a">[Opcion1]</button></div>
+			<div class="item_opcion2"><button class="btnOpciones medio fuente1" onclick=clic(this)
+					id="b">[Opcion2]</button></div>
+			<div class="item_opcion3"><button class="btnOpciones medio fuente1" onclick=clic(this)
+					id="c">[Opcion3]</button></div>
 		</div>
 	</section>
 
@@ -65,8 +78,10 @@
 		<img src="img/bt_inicio.png" onclick="location.reload()" class="volver">
 		<h1 class="titulo fuente1">Tus resultados fueron:</h1>
 		<!-- id result_1 es para hacer el calculo y cambiar el valor #-->
-		<div class="fuente2 resultadoTotal"><p id="puntaje">Total: #</p>/25</div>
-		<p class="titulo fuente2" id="men">[Mensaje]</p>
+		<div class="fuente2 resultadoTotal">
+			<p id="puntaje">Total: #</p>/25
+		</div>
+		<p class="mensaje fuente2" id="men">[Mensaje]</p>
 		<P class="medio fuente1" id="desc">[Descripcion]</P>
 		<div class="circulo red"></div>
 		<div class="circulo blue"></div>
