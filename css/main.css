@@ -82,10 +82,10 @@ section{
 
 }
 .imgMenu2{
-  position: relative;
-  left: -64px;
-  top: -87px;
-  width: 68%;
+  position: absolute;
+  left: -6px;
+  top: 351px;
+  width: 245px;
   z-index: 0; /*ponerlo detras de los botones*/
 }
 .imgRetrato{
@@ -120,10 +120,10 @@ section{
   top: 10%;
 }
 .imgInstrucciones2{
-  width: 84%;
-  position: relative;
-  top: 12%;
-  left: 8%;
+  width: 302px;
+  position: absolute;
+  top: 343px;
+  left: 58px;
   z-index: 0;
 }
 
@@ -194,6 +194,10 @@ button{
   margin: 2% auto;
 
 }
+.MenAndDesc{
+  position: relative;
+  top: -210px;
+}
 /* Contenedores*/
 .contenedor_Menu{
   margin-top: 15%;
@@ -261,7 +265,7 @@ button{
   height: 130px;
   background: #C93E46;
   position: relative;
-  top: -47%;
+  top: -115px;
   left: 29%;
   z-index: 0;
 }
@@ -270,7 +274,7 @@ button{
   height: 80px;
   background: #00BFBD;
   position: relative;
-  top: -60%;
+  top: -204px;
   left: 49%;
   z-index: 1;
 }
