@@ -3,7 +3,7 @@ var tiempo_splash = 2500;
 
 var puntaje = 0; // Puntaje
 var contador = 0; // Contador de preguntas
-var max = 1; // Maxima cantidad de preguntas
+var max = 24; // Maxima cantidad de preguntas
 
 var aux = 0;
 
@@ -106,11 +106,6 @@ function buena() {
 	else {
 		setTimeout(cambiarResult, tiempo);//hacer funcion cuando se acabe el 'tiempo'
 	}
-	swal.fire({// alert buena
-		icon: "success",
-		showConfirmButton: false,
-		timer: 1000
-	});
 }
 function mala() {
 	elemento.style.background = '#707070';
@@ -122,11 +117,6 @@ function mala() {
 	else {
 		setTimeout(cambiarResult, tiempo);//hacer funcion cuando se acabe el 'tiempo'
 	}
-	swal.fire({ //alert mala
-		icon: "error",
-		timer:1000,
-		showConfirmButton: false
-	});
 }
 function cambiarResult() {
 	for (var i in secciones) {
