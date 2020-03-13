@@ -3,7 +3,7 @@ var tiempo_splash = 2500;
 
 var puntaje = 0; // Puntaje
 var contador = 0; // Contador de preguntas
-var max = 24; // Maxima cantidad de preguntas
+var max = 25; // Maxima cantidad de preguntas
 
 var aux = 0;
 
