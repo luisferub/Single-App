@@ -83,9 +83,8 @@ section{
 }
 .imgMenu2{
   position: absolute;
-  left: -6px;
-  top: 351px;
-  width: 245px;
+  left: -5px;
+  top: 360px;
   z-index: 0; /*ponerlo detras de los botones*/
 }
 .imgRetrato{
@@ -95,9 +94,6 @@ section{
   width: 80%;
   position: relative;
   top: 10%;
-}
-.imgSelfie{ /*tamaño imgenes de retratos autores*/
-  width: 30%;
 }
 .imgValeria{
   position: relative;
