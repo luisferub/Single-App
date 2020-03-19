@@ -34,22 +34,27 @@ function cambiarSeccion(id_seccion) {
 	secciones[id_seccion].classList.remove("oculto");
 
 	if (id_seccion == 3) {
+
+		var A = document.getElementById("a");
+		var B = document.getElementById("b");
+		var C = document.getElementById("c");
+
 		document.getElementById("genero").innerHTML = personajes[lista[0]][1];
 		letra = personajes[lista[0]][2];
 		document.getElementById(letra).innerHTML = personajes[lista[0]][0];
 		document.getElementById("personaje").src = personajes[lista[0]][5];
 		switch (letra) {
 			case "a":
-				document.getElementById("b").innerHTML = personajes[lista[0]][3];
-				document.getElementById("c").innerHTML = personajes[lista[0]][4];
+				B.innerHTML = personajes[lista[0]][3];
+				C.innerHTML = personajes[lista[0]][4];
 				break;
 			case "b":
-				document.getElementById("a").innerHTML = personajes[lista[0]][3];
-				document.getElementById("c").innerHTML = personajes[lista[0]][4];
+				A.innerHTML = personajes[lista[0]][3];
+				C.innerHTML = personajes[lista[0]][4];
 				break;
 			case "c":
-				document.getElementById("a").innerHTML = personajes[lista[0]][3];
-				document.getElementById("b").innerHTML = personajes[lista[0]][4];
+				A.innerHTML = personajes[lista[0]][3];
+				B.innerHTML = personajes[lista[0]][4];
 				break;
 		}
 	}
@@ -119,6 +124,11 @@ function mala() {
 	}
 }
 function cambiarResult() {
+
+	var men = document.getElementById("men");
+	var desc = document.getElementById("desc");
+	var puntos = document.getElementById("puntaje");
+
 	for (var i in secciones) {
 		secciones[i].classList.add("oculto");
 	}
@@ -126,32 +136,32 @@ function cambiarResult() {
 
 	elemento.style.background = 'white';//volver a poner el boton del color blanco
 	if (puntaje < 10) {
-		document.getElementById("puntaje").innerHTML = ("0" + puntaje);
+		puntos.innerHTML = ("0" + puntaje);
 	}
 	else {
-		document.getElementById("puntaje").innerHTML = (puntaje);
+		puntos.innerHTML = (puntaje);
 	}
 
 
 	if (puntaje <= 5) {
-		document.getElementById("men").innerHTML = mensaje[4][0];
-		document.getElementById("desc").innerHTML = mensaje[4][1];
+		men.innerHTML = mensaje[4][0];
+		desc.innerHTML = mensaje[4][1];
 	}
 	if (puntaje > 5 && puntaje <= 10) {
-		document.getElementById("men").innerHTML = mensaje[3][0];
-		document.getElementById("desc").innerHTML = mensaje[3][1];
+		men.innerHTML = mensaje[3][0];
+		desc.innerHTML = mensaje[3][1];
 	}
 	if (puntaje > 10 && puntaje <= 15) {
-		document.getElementById("men").innerHTML = mensaje[2][0];
-		document.getElementById("desc").innerHTML = mensaje[2][1];
+		men.innerHTML = mensaje[2][0];
+		desc.innerHTML = mensaje[2][1];
 	}
 	if (puntaje > 15 && puntaje <= 20) {
-		document.getElementById("men").innerHTML = mensaje[1][0];
-		document.getElementById("desc").innerHTML = mensaje[1][1];
+		men.innerHTML = mensaje[1][0];
+		desc.innerHTML = mensaje[1][1];
 	}
 	if (puntaje > 20 && puntaje <= 25) {
-		document.getElementById("men").innerHTML = mensaje[0][0];
-		document.getElementById("desc").innerHTML = mensaje[0][1];
+		men.innerHTML = mensaje[0][0];
+		desc.innerHTML = mensaje[0][1];
 	}
 
 }
@@ -159,8 +169,12 @@ var i = 1;
 function continuarSiguiente() {
 	elemento.style.background = '#00BFBD';//volver a poner el boton del color blanco
 	elemento.style.color = "white";
-	//En caso de emergencia xd, me bloquea el boton y no deja volver a cambiar la escala en el "celular"
-	//elemento.style.transform = "scale(1)";
+	//En caso de emergencia: elemento.style.transform = "scale(1)";
+
+	var A = document.getElementById("a");
+	var B = document.getElementById("b");
+	var C = document.getElementById("c");
+
 	aux = 0;
 	if (contador < max) {
 		document.getElementById("genero").innerHTML = personajes[lista[i]][1];
@@ -169,16 +183,16 @@ function continuarSiguiente() {
 		document.getElementById("personaje").src = personajes[lista[i]][5];
 		switch (letra) {
 			case "a":
-				document.getElementById("b").innerHTML = personajes[lista[i]][3];
-				document.getElementById("c").innerHTML = personajes[lista[i]][4];
+				B.innerHTML = personajes[lista[i]][3];
+				C.innerHTML = personajes[lista[i]][4];
 				break;
 			case "b":
-				document.getElementById("a").innerHTML = personajes[lista[i]][3];
-				document.getElementById("c").innerHTML = personajes[lista[i]][4];
+				A.innerHTML = personajes[lista[i]][3];
+				C.innerHTML = personajes[lista[i]][4];
 				break;
 			case "c":
-				document.getElementById("a").innerHTML = personajes[lista[i]][3];
-				document.getElementById("b").innerHTML = personajes[lista[i]][4];
+				A.innerHTML = personajes[lista[i]][3];
+				B.innerHTML = personajes[lista[i]][4];
 				break;
 		}
 		i++;
