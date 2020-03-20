@@ -86,7 +86,7 @@ function clic(boton) {
 	if (aux == 0) {
 		elemento = document.getElementById(boton.id);
 		//en caso de emergencia xd
-		//elemento.style.transform = "scale(1.1)";
+		elemento.style.transform = "scale(1.1)";
 		respuesta = document.getElementById(letra);
 		contador++;
 		aux = 1;
@@ -169,7 +169,7 @@ var i = 1;
 function continuarSiguiente() {
 	elemento.style.background = '#00BFBD';//volver a poner el boton del color blanco
 	elemento.style.color = "white";
-	//En caso de emergencia: elemento.style.transform = "scale(1)";
+	elemento.style.transform = "scale(1)";
 
 	var A = document.getElementById("a");
 	var B = document.getElementById("b");

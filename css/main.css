@@ -138,23 +138,18 @@ button{
   transition-duration: 0.4s;
   background: #C93E46;
 }
-
-.btnMenu:hover {
-  background-color: #17202A;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  color: white;
-}
-
 .volver {
   position: absolute;
   left: 20px;
   top: 20px;
   width: 40px;
-  transition-duration: 0.6s;
+  transition-duration: 0.5s;
 }
+
 .volver:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+
 
 .btnOpciones {
   width: 100%;
@@ -165,10 +160,6 @@ button{
   transition-duration: 0.4s;
   background: #00BFBD;
   color: white;
-}
-
-.btnOpciones:hover {
-  transform: scale(1.1);
 }
 #seccion_5 button{ /* boton jugar de instrucciones*/
   position: relative;
